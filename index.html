@@ -5,11 +5,278 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/css/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.css">
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
+    <style>
+      table, th, td {border: 1px solid black; border-collapse: collapse; padding-left: .1cm;}
+    </style>
   </head>
   <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
-    <script>
-      // Run queries and display results here
-    </script>
+        <div class="mixpanel-platform-section">
+      <div class="instructions">
+        <h1 style="font-size: 18px; color: rgb(95,105,131)">Glossary: Events & Properties + Definitions</h1>
+      </div>
+    <table border="1">
+<tbody>
+<tr>
+<td><strong><font color=blue>Event Name</font></strong></td>
+<td><strong><font color=blue>Event Definition</font></strong></td>
+<td><strong><font color=red>Property Name</font></strong></td>
+<td><strong><font color=red>Property Definition</font></strong></td>
+<td><strong><font color=red>Example Value</font></strong></td>
+</tr>
+<tr>
+<td><strong>App Mounted</strong></td>
+<td>Fired when user visits the app</td>
+<td><strong>Browser</strong></td>
+<td>Browser name (not versioned)</td>
+<td>Chrome</td>
+</tr>
+<tr>
+<td><strong>Audio Muted</strong></td>
+<td>Fired when a user mutes the audio on a video</td>
+<td><strong>Browser Version</strong></td>
+<td>Browser version number</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Audio Unmuted</strong></td>
+<td>Fired when a user unmutes the audio on a video</td>
+<td><strong>City</strong></td>
+<td>User's city, parsed by IP</td>
+<td>New York</td>
+</tr>
+<tr>
+<td><strong>Share Sheet Closed</strong></td>
+<td>User closes the social share page</td>
+<td><strong>Current URL</strong></td>
+<td>The full URL of the webpage on which the event is triggered</td>
+<td>https://dev.instant.me</td>
+</tr>
+<tr>
+<td><strong>Share Sheet Opened</strong></td>
+<td>User opens the social share page</td>
+<td><strong>Device</strong></td>
+<td>Name of user's device, if they're on mobile web</td>
+<td>Android</td>
+</tr>
+<tr>
+<td><strong>Slide Changed</strong></td>
+<td>When a user swipes to a new piece of content</td>
+<td><strong>Initial Referrer</strong></td>
+<td>Referring URL at first arrival</td>
+<td>$direct</td>
+</tr>
+<tr>
+<td><strong>Social Share</strong></td>
+<td>User shares a piece of content</td>
+<td><strong>Initial Referring Domain</strong></td>
+<td>Referring domain at first arrival</td>
+<td>cdn.flipboard.com</td>
+</tr>
+<tr>
+<td><strong>Video Ended</strong></td>
+<td>When a video is 100% completed, or video is exited if it can be detected</td>
+<td><strong>Library Version</strong></td>
+<td>Mixpanel library used to send this data</td>
+<td>2.7.2</td>
+</tr>
+<tr>
+<td><strong>Video Paused</strong></td>
+<td>User pauses a video</td>
+<td><strong>Operating System</strong></td>
+<td>User's operating system</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td><strong>Video Played for Seconds</strong></td>
+<td>&nbsp;</td>
+<td><strong>Referrer</strong></td>
+<td>Referring URL, including your own domain</td>
+<td>android-app://com.Slack</td>
+</tr>
+<tr>
+<td><strong>Video Progress</strong></td>
+<td>&nbsp;</td>
+<td><strong>Referring Domain</strong></td>
+<td>Referring domain, including your own domain</td>
+<td>drive.google.com</td>
+</tr>
+<tr>
+<td><strong>Video Rewound</strong></td>
+<td>&nbsp;</td>
+<td><strong>Region</strong></td>
+<td>User's region (state or province), parsed from IP</td>
+<td>Alberta</td>
+</tr>
+<tr>
+<td><strong>Video Started</strong></td>
+<td>User clicks the play button on a video or the video starts to autoplay</td>
+<td><strong>Screen Height</strong></td>
+<td>Height of the screen of the device</td>
+<td>1023</td>
+</tr>
+<tr>
+<td><strong>Video Stopped</strong></td>
+<td>&nbsp;</td>
+<td><strong>Screen Width</strong></td>
+<td>Width of the screen of the device</td>
+<td>1080</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>Search Engine</strong></td>
+<td>Search engine a customer used when they first arrived at your domain</td>
+<td>bing</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>duration</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>durationSeconds</strong></td>
+<td>Length of video in seconds</td>
+<td>24.085</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>editionId</strong></td>
+<td>Edition Id of video</td>
+<td>3</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>fromPostId</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>isMuted</strong></td>
+<td>If the video is muted or not</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>isSponsored</strong></td>
+<td>&nbsp;</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>Country</strong></td>
+<td>User's country, parsed from IP</td>
+<td>Argentina</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>Search Keyword</strong></td>
+<td>&nbsp;</td>
+<td>instant.me</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>muted</strong></td>
+<td>OLD PROPERTY - USE isMuted PROPERTY INSTEAD</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>percentProgress</strong></td>
+<td>OLX PROPERTY - USE progressPercent PROPERTY INSTEAD</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>postId</strong></td>
+<td>&nbsp;</td>
+<td>11</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>progressPercent</strong></td>
+<td>Percent of video watched by user</td>
+<td>12.340564</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>progressSeconds</strong></td>
+<td>Seconds of video watched by user</td>
+<td>6</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>providerId</strong></td>
+<td>Brightcove Tag</td>
+<td>4980698796001</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>rewindSeconds</strong></td>
+<td>The number of seconds rewound on the video</td>
+<td>5</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>sponsorName</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>tags</strong></td>
+<td>&nbsp;</td>
+<td>vidcon</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>title</strong></td>
+<td>Title of the video</td>
+<td>Baby Koalas Stupid Cute</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>toPostId</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>type</strong></td>
+<td>&nbsp;</td>
+<td>Twitter</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>videoType</strong></td>
+<td>&nbsp;</td>
+<td>canvas</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
   </body>
 </html>
